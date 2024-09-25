@@ -1,0 +1,35 @@
+/* src/components/MapSection.css */
+
+.map-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f7f9fc;
+}
+
+.map-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-container {
+  border-radius: 10px;
+}
+
+.leaflet-popup-content h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #1d72b8;
+}
+
+.leaflet-popup-content p {
+  margin-top: 5px;
+  font-size: 14px;
+}

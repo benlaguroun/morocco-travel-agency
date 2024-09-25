@@ -8,7 +8,8 @@ import Testimonials from "./components/Testimonials";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
-import TravelBuilder from "./components/TravelBuilder"; // Import the TravelBuilder component
+import TravelBuilder from "./components/TravelBuilder";
+import MapSection from "./components/MapSection"; // Import the MapSection component
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
       <Destinations />
       <Testimonials />
       <Gallery />
-      <TravelBuilder /> {/* Add the Travel Experience Builder section */}
+      <TravelBuilder />
+      <MapSection /> {/* Add the Map Section */}
       <ContactUs />
       <Footer />
     </div>
