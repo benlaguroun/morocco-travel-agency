@@ -5,12 +5,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Tours from "./pages/Tours";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
+import MenuBar from "./components/MenuBar"; // Updated import
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* MenuBar includes the Navbar and Promotion Banner */}
+      <MenuBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -1,108 +1,44 @@
 /* Hero.css */
 .hero-section {
   position: relative;
-  width: 100%;
   height: 100vh;
-  overflow: hidden;
-}
-
-.promo-banner {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 99, 71, 0.7); /* Transparent background */
   color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
-  z-index: 1001; /* Ensure it’s on top of everything including the navbar */
 }
 
-.hero-image {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-  background-attachment: fixed; /* Fix background on scroll */
-}
-
-.carousel-overlay {
+.hero-video {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
-}
-
-.carousel-overlay h1 {
-  font-size: 4rem;
-  font-family: "Playfair Display", serif;
-}
-
-.carousel-overlay p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  transform: translateY(-50%);
 }
 
 .cta-button {
   background-color: #ff6347;
   color: white;
   padding: 10px 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #e5533c;
+  margin-top: 20px;
 }
 
 .counter-section {
   display: flex;
-  justify-content: space-around;
-  padding: 40px 0;
+  justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
 }
 
 .counter-item {
+  margin: 0 15px;
   text-align: center;
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-  padding: 20px;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-.counter-item p {
-  font-size: 1.2rem;
-  color: white;
-}
-
-.counter-icon {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 10px;
-}
-
-/* Navbar styles */
-.solid-navbar {
-  background-color: white !important;
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-}
-
-.navbar {
-  transition: background-color 0.3s ease;
-}
-
-/* Full background image that stays fixed when scrolling */
-.hero-section .hero-image {
-  background-attachment: fixed;
+  font-size: 1.5rem;
 }

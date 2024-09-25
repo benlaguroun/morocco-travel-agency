@@ -1,0 +1,33 @@
+/* MenuBar.css */
+.promotion-banner {
+  background-color: #ff6347;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.hide-promo {
+  display: none;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  padding: 20px;
+  margin-top: 60px;
+  position: fixed;
+}
+
+.navbar-fixed {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
