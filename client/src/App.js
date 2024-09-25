@@ -5,7 +5,10 @@ import HeroSection from "./components/HeroSection";
 import ServiceSection from "./components/ServiceSection";
 import Destinations from "./components/Destinations";
 import Testimonials from "./components/Testimonials";
-import ContactUs from "./components/ContactUs"; // Import the ContactUs component
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
+import TravelBuilder from "./components/TravelBuilder"; // Import the TravelBuilder component
 
 const App = () => {
   return (
@@ -15,7 +18,10 @@ const App = () => {
       <ServiceSection />
       <Destinations />
       <Testimonials />
-      <ContactUs /> {/* Add the ContactUs section */}
+      <Gallery />
+      <TravelBuilder /> {/* Add the Travel Experience Builder section */}
+      <ContactUs />
+      <Footer />
     </div>
   );
 };
