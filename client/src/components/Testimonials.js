@@ -10,21 +10,21 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "John Doe",
-      image: "/images/john.jpg",
+      image: "../images/john.jpg",
       quote:
         "This was the best vacation of my life! Everything was perfectly organized.",
       rating: 5,
     },
     {
       name: "Jane Smith",
-      image: "/images/jane.jpg",
+      image: "../images/jane.jpg",
       quote:
         "Amazing service and great destinations! Highly recommend this travel agency.",
       rating: 4,
     },
     {
       name: "Robert Brown",
-      image: "/images/robert.jpg",
+      image: "../images/robert.jpg",
       quote:
         "Thanks to the team for making our trip so special! A great experience!",
       rating: 5,
