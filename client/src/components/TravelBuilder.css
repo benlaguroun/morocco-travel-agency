@@ -1,46 +1,130 @@
 /* src/components/TravelBuilder.css */
-.travel-builder-section {
-  padding: 40px;
-  background-color: #f7f7f7;
+
+.travel-builder {
+  padding: 50px;
   text-align: center;
+  background-color: #f5f7fa;
 }
 
-.travel-types {
-  margin: 20px 0;
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-.type-options label {
-  margin-right: 15px;
-  font-size: 16px;
+h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
 }
 
-.budget-slider {
-  margin: 20px 0;
+/* Step 1: Travel Type Selector */
+.travel-type-selector {
+  margin-bottom: 30px;
 }
 
-.budget-slider input {
-  width: 100%;
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+.type-cards {
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
-.destination-card {
-  background-color: white;
+.type-card {
+  width: 150px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.destination-card h4 {
+.type-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.type-card.selected {
+  border: 2px solid #1d72b8;
+}
+
+.type-card i {
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
-.destination-card p {
-  margin: 5px 0;
+.type-card h4 {
+  font-size: 18px;
+}
+
+/* Step 2: Budget Slider */
+.budget-slider {
+  margin-bottom: 40px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* Step 3: Destination Results */
+.destination-results {
+  margin-top: 40px;
+}
+
+.destination-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.destination-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 15px;
+}
+
+.destination-info h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.destination-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.destination-info button {
+  padding: 8px 12px;
+  background-color: #1d72b8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.destination-info button:hover {
+  background-color: #155a8a;
 }
