@@ -1,25 +1,23 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Tours from "./pages/Tours";
-import Contact from "./pages/Contact";
-import MenuBar from "./components/MenuBar"; // Updated import
+import MenuBar from "./components/MenuBar";
+import HeroSection from "./components/HeroSection";
+import ServiceSection from "./components/ServiceSection";
+import Destinations from "./components/Destinations";
+import Testimonials from "./components/Testimonials";
+import ContactUs from "./components/ContactUs"; // Import the ContactUs component
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      {/* MenuBar includes the Navbar and Promotion Banner */}
+    <div>
       <MenuBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <HeroSection />
+      <ServiceSection />
+      <Destinations />
+      <Testimonials />
+      <ContactUs /> {/* Add the ContactUs section */}
+    </div>
   );
-}
+};
 
 export default App;

@@ -1,49 +1,52 @@
-// MenuBar.js
-import React, { useEffect } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+// src/components/MenuBar.js
+import React, { useState, useEffect } from "react";
 import "./MenuBar.css";
 
 const MenuBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.querySelector(".navbar");
-      const promoBanner = document.querySelector(".promotion-banner");
-      if (window.scrollY > 100) {
-        navbar.classList.add("navbar-fixed");
-        promoBanner.classList.add("hide-promo");
-      } else {
-        navbar.classList.remove("navbar-fixed");
-        promoBanner.classList.remove("hide-promo");
-      }
+      const offset = window.scrollY;
+      setScrolled(offset > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div>
-      {/* Promotion Banner */}
-      <div className="promotion-banner">
-        <p>Special Offer! 20% off on all bookings. Use code: TRAVEL20</p>
+    <header className={`menu-bar ${scrolled ? "scrolled" : ""}`}>
+      <div className="promo-bar">
+        <p>Exclusive deals for Morocco - Don't miss out!</p>
       </div>
-
-      {/* Navbar */}
-      <Navbar collapseOnSelect expand="lg" className="navbar" variant="light">
-        <Navbar.Brand href="#home">Travel Agency</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#tours">Tours</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+      <nav className="nav-bar">
+        <div className="logo">
+          <h1>TravelAgency</h1>
+        </div>
+        <ul className="menu-items">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#pricing">Pricing</a>
+          </li>
+        </ul>
+        <div className="auth-buttons">
+          <button className="signup">Signup</button>
+          <button className="login">Login</button>
+        </div>
+      </nav>
+    </header>
   );
 };
 
