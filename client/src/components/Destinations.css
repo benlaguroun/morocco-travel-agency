@@ -35,7 +35,7 @@
 .destination-image-container {
   position: relative;
   overflow: hidden;
-  height: 240px; /* Adjust this to make the images bigger */
+  height: 250px; /* Adjust this to make the images bigger */
 }
 
 .destination-image {
@@ -85,6 +85,7 @@
 .destination-details {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
   margin-bottom: 20px;
 }

@@ -1,77 +1,132 @@
-/* src/components/MenuBar.css */
+/* MenuBar.css */
+
 .menu-bar {
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
-.menu-bar.scrolled .nav-bar {
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.menu-bar.scrolled {
+  background-color: #000; /* Black background when scrolled */
 }
 
 .promo-bar {
-  background-color: #f0ad4e;
+  background-color: #ff6600;
   text-align: center;
-  padding: 5px;
-  transition: top 0.3s;
-}
-
-.scrolled .promo-bar {
-  display: none;
+  padding: 0.5rem;
+  color: white;
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+  padding: 1rem 2rem;
 }
 
-.logo h1 {
-  margin: 0;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
 }
 
 .menu-items {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.menu-items li {
+  position: relative;
 }
 
 .menu-items li a {
+  color: white;
   text-decoration: none;
-  color: #e7e0e0;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
 }
 
-.auth-buttons button {
-  margin-left: 10px;
-  padding: 8px 16px;
+.menu-items .dropdown-toggle {
+  background: none;
   border: none;
-  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+}
+
+.menu-items .dropdown-arrow {
+  margin-left: 0.5rem;
+}
+
+.menu-items .dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #333;
+  list-style: none;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-items .dropdown-menu li {
+  padding: 0.5rem;
+}
+
+.menu-items .dropdown-menu li a {
+  color: white;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons .signup,
+.auth-buttons .login {
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
-.signup {
-  background-color: #ff9800;
-  color: #fff;
+.auth-buttons .login {
+  background-color: transparent;
+  border: 1px solid white;
 }
 
-.login {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
   .menu-items {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
   }
+
+  .menu-items.active {
+    display: flex;
+  }
+
   .auth-buttons {
     display: none;
   }
