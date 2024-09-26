@@ -23,13 +23,28 @@
   border-radius: 10px;
 }
 
-.leaflet-popup-content h4 {
+.destination-popup h4 {
   margin: 0;
   font-size: 18px;
   color: #1d72b8;
 }
 
-.leaflet-popup-content p {
+.destination-popup p {
   margin-top: 5px;
   font-size: 14px;
+}
+
+.view-more-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #f25c05;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-more-btn:hover {
+  background-color: #d14502;
 }

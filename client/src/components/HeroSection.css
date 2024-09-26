@@ -1,7 +1,7 @@
 /* src/components/HeroSection.css */
 .hero-section {
   height: 100vh;
-  background: url("./hero-bg1.jpg") no-repeat center center/cover;
+  background: url("./hero-bg2.jpg") no-repeat center center/cover;
   position: relative;
 }
 
