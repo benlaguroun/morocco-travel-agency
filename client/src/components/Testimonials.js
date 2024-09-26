@@ -47,18 +47,22 @@ const Testimonials = () => {
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-item">
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="testimonial-image"
-            />
-            <p className="testimonial-quote">"{testimonial.quote}"</p>
-            <div className="testimonial-stars">
-              {Array.from({ length: testimonial.rating }, (_, i) => (
-                <FaStar key={i} className="star-icon" />
-              ))}
+            <div className="testimonial-content">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="testimonial-image"
+              />
+              <div className="testimonial-text">
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <div className="testimonial-stars">
+                  {Array.from({ length: testimonial.rating }, (_, i) => (
+                    <FaStar key={i} className="star-icon" />
+                  ))}
+                </div>
+                <p className="testimonial-name">- {testimonial.name}</p>
+              </div>
             </div>
-            <p className="testimonial-name">- {testimonial.name}</p>
           </div>
         ))}
       </Slider>
