@@ -3,12 +3,13 @@ import "./MenuBar.css";
 
 const MenuBar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // To toggle menu on mobile
+  const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState({
     tours: false,
     organizedTravels: false,
     services: false,
-  }); // To toggle sub-menus
+  });
+  const [activeItem, setActiveItem] = useState(""); // To track active menu item
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,10 @@ const MenuBar = () => {
     }));
   };
 
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+
   return (
     <header className={`menu-bar ${scrolled ? "scrolled" : ""}`}>
       <div className="promo-bar">
@@ -44,17 +49,25 @@ const MenuBar = () => {
         </div>
         <ul className={`menu-items ${menuOpen ? "active" : ""}`}>
           <li>
-            <a href="#home">Home</a>
+            <a
+              href="#home"
+              className={activeItem === "home" ? "active" : ""}
+              onClick={() => handleItemClick("home")}
+            >
+              Home
+            </a>
           </li>
           <li>
             <button
-              className="dropdown-toggle"
-              onClick={() => toggleSubMenu("tours")}
+              className={`dropdown-toggle ${
+                activeItem === "tours" ? "active" : ""
+              }`}
+              onClick={() => {
+                toggleSubMenu("tours");
+                handleItemClick("tours");
+              }}
             >
-              Tours{" "}
-              <span className="dropdown-arrow">
-                {subMenuOpen.tours ? "▲" : "▼"}
-              </span>
+              Tours
             </button>
             {subMenuOpen.tours && (
               <ul className="dropdown-menu">
@@ -68,20 +81,34 @@ const MenuBar = () => {
             )}
           </li>
           <li>
-            <a href="#activities">Activities</a>
+            <a
+              href="#activities"
+              className={activeItem === "activities" ? "active" : ""}
+              onClick={() => handleItemClick("activities")}
+            >
+              Activities
+            </a>
           </li>
           <li>
-            <a href="#excursions">Excursions</a>
+            <a
+              href="#excursions"
+              className={activeItem === "excursions" ? "active" : ""}
+              onClick={() => handleItemClick("excursions")}
+            >
+              Excursions
+            </a>
           </li>
           <li>
             <button
-              className="dropdown-toggle"
-              onClick={() => toggleSubMenu("organizedTravels")}
+              className={`dropdown-toggle ${
+                activeItem === "organizedTravels" ? "active" : ""
+              }`}
+              onClick={() => {
+                toggleSubMenu("organizedTravels");
+                handleItemClick("organizedTravels");
+              }}
             >
-              Organized Travels{" "}
-              <span className="dropdown-arrow">
-                {subMenuOpen.organizedTravels ? "▲" : "▼"}
-              </span>
+              Organized Travels
             </button>
             {subMenuOpen.organizedTravels && (
               <ul className="dropdown-menu">
@@ -99,13 +126,15 @@ const MenuBar = () => {
           </li>
           <li>
             <button
-              className="dropdown-toggle"
-              onClick={() => toggleSubMenu("services")}
+              className={`dropdown-toggle ${
+                activeItem === "services" ? "active" : ""
+              }`}
+              onClick={() => {
+                toggleSubMenu("services");
+                handleItemClick("services");
+              }}
             >
-              Our Services{" "}
-              <span className="dropdown-arrow">
-                {subMenuOpen.services ? "▲" : "▼"}
-              </span>
+              Our Services
             </button>
             {subMenuOpen.services && (
               <ul className="dropdown-menu">
