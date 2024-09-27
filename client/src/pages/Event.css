@@ -1,0 +1,130 @@
+/* General Styling */
+.event-page {
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  color: #2c3e50;
+}
+
+/* Header Styling */
+.event-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.event-header h1 {
+  font-size: 3rem;
+  color: #d4af37; /* Golden accent */
+}
+
+.event-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+/* Event Grid Layout */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Event Card */
+.event-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Event Image */
+.event-image-wrapper {
+  overflow: hidden;
+  height: 200px;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Event Details */
+.event-details {
+  padding: 1.5rem;
+}
+
+.event-details h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.event-meta {
+  font-size: 1rem;
+  color: #d4af37; /* Golden color for event meta info */
+  margin-bottom: 1.2rem;
+}
+
+.event-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.view-more-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #d4af37;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #b89b2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-image-wrapper {
+    height: 180px;
+  }
+
+  .event-details h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-image-wrapper {
+    height: 150px;
+  }
+
+  .event-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .event-description {
+    font-size: 0.9rem;
+  }
+
+  .view-more-btn {
+    font-size: 0.9rem;
+  }
+}
