@@ -1,0 +1,45 @@
+.tours-page {
+  text-align: center;
+  color: #333;
+}
+
+.tours-hero {
+  background: url("./images/tours-hero.jpg") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+.tour-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+}
+
+.tour-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-card .price {
+  color: #ff6600;
+  font-weight: bold;
+}

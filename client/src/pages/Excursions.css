@@ -1,0 +1,156 @@
+/* General Page Styling */
+.excursions-page {
+  font-family: "Open Sans", sans-serif;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header Styling with Parallax Effect */
+.excursions-header {
+  background-image: url("./images/excursions-header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.excursions-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.excursions-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  z-index: 2;
+}
+
+/* Add a dark overlay for text visibility */
+.excursions-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Excursion List Styling */
+.excursions-list {
+  margin-top: 2rem;
+}
+
+.excursion-card {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  transition: transform 0.3s ease;
+}
+
+.excursion-card:hover {
+  transform: scale(1.02);
+}
+
+/* Alternating layout */
+.excursion-card.left {
+  flex-direction: row;
+}
+
+.excursion-card.right {
+  flex-direction: row-reverse;
+}
+
+/* Image Wrapper */
+.excursion-image-wrapper {
+  flex: 1;
+}
+
+.excursion-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Content Styling */
+.excursion-content {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.excursion-content h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.excursion-content p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.excursion-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+/* Add color matching with the website's style */
+.excursion-content h2 {
+  color: #007bff;
+}
+
+.excursion-details span {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .excursion-card {
+    flex-direction: column;
+  }
+
+  .excursion-card.right {
+    flex-direction: column;
+  }
+
+  .excursion-image {
+    height: 200px;
+  }
+
+  .excursion-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .excursion-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .excursion-content p {
+    font-size: 1rem;
+  }
+
+  .excursion-image {
+    height: 150px;
+  }
+}

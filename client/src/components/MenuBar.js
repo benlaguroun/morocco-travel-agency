@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./MenuBar.css";
 
 const MenuBar = () => {
@@ -49,13 +50,13 @@ const MenuBar = () => {
         </div>
         <ul className={`menu-items ${menuOpen ? "active" : ""}`}>
           <li>
-            <a
-              href="#home"
+            <Link
+              to="/"
               className={activeItem === "home" ? "active" : ""}
               onClick={() => handleItemClick("home")}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <button
@@ -72,31 +73,31 @@ const MenuBar = () => {
             {subMenuOpen.tours && (
               <ul className="dropdown-menu">
                 <li>
-                  <a href="#tours">Tours</a>
+                  <Link to="/tours">Tours</Link>
                 </li>
                 <li>
-                  <a href="#trekking">Trekking</a>
+                  <Link to="/trekking">Trekking</Link>
                 </li>
               </ul>
             )}
           </li>
           <li>
-            <a
-              href="#activities"
+            <Link
+              to="/activities"
               className={activeItem === "activities" ? "active" : ""}
               onClick={() => handleItemClick("activities")}
             >
               Activities
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#excursions"
+            <Link
+              to="/excursions"
               className={activeItem === "excursions" ? "active" : ""}
               onClick={() => handleItemClick("excursions")}
             >
               Excursions
-            </a>
+            </Link>
           </li>
           <li>
             <button
@@ -113,13 +114,13 @@ const MenuBar = () => {
             {subMenuOpen.organizedTravels && (
               <ul className="dropdown-menu">
                 <li>
-                  <a href="#national">National Travel</a>
+                  <Link to="/national-travel">National Travel</Link>
                 </li>
                 <li>
-                  <a href="#international">International Travel</a>
+                  <Link to="/international-travel">International Travel</Link>
                 </li>
                 <li>
-                  <a href="#hajj">Hajj / Umrah</a>
+                  <Link to="/hajj-umrah">Hajj / Umrah</Link>
                 </li>
               </ul>
             )}
@@ -139,16 +140,16 @@ const MenuBar = () => {
             {subMenuOpen.services && (
               <ul className="dropdown-menu">
                 <li>
-                  <a href="#event">Event</a>
+                  <Link to="/event">Event</Link>
                 </li>
                 <li>
-                  <a href="#flights">Flights</a>
+                  <Link to="/flights">Flights</Link>
                 </li>
                 <li>
-                  <a href="#hotels">Hotels</a>
+                  <Link to="/hotels">Hotels</Link>
                 </li>
                 <li>
-                  <a href="#transfer">Transfer</a>
+                  <Link to="/transfer">Transfer</Link>
                 </li>
               </ul>
             )}

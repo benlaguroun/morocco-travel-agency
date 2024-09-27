@@ -1,0 +1,143 @@
+/* General Page Styling */
+.activities-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.activities-header {
+  background-image: url("./images/activities-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.activities-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text clarity */
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.activities-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.activities-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Activities List Styling */
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.activity-card:hover {
+  transform: scale(1.05);
+}
+
+.activity-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activity-content {
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+.activity-content h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.activity-content p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.activity-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+/* Add color to match website style */
+.activity-card {
+  background-color: #ffffff;
+}
+
+.activity-content h2 {
+  color: #007bff; /* Website primary color */
+}
+
+.activity-details span {
+  color: #007bff; /* Accent color */
+}
+
+.activity-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2); /* Soft blue shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .activity-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .activity-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .activity-image {
+    height: 150px;
+  }
+
+  .activity-content p {
+    font-size: 0.9rem;
+  }
+}
