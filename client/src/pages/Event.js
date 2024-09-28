@@ -6,7 +6,7 @@ const eventList = [
     title: "Marrakech Cultural Festival",
     date: "15th November, 2024",
     location: "Marrakech, Morocco",
-    image: "/images/marrakech-festival.jpg",
+    image: "../images/marrakech-festival.jpg",
     description:
       "Join the vibrant cultural festival of Marrakech, featuring traditional music, art exhibitions, and performances from across Morocco.",
   },
@@ -14,7 +14,7 @@ const eventList = [
     title: "Sahara Desert Marathon",
     date: "1st December, 2024",
     location: "Merzouga, Morocco",
-    image: "/images/sahara-marathon.jpg",
+    image: "../images/sahara-marathon.jpg",
     description:
       "Challenge yourself to one of the world’s toughest marathons, set against the stunning backdrop of the Sahara Desert dunes.",
   },
@@ -22,7 +22,7 @@ const eventList = [
     title: "Chefchaouen Food Tour",
     date: "20th January, 2025",
     location: "Chefchaouen, Morocco",
-    image: "/images/chefchaouen-food.jpg",
+    image: "../images/chefchaouen-food.jpg",
     description:
       "Taste the flavors of the Blue City, Chefchaouen, with a guided tour that explores Moroccan culinary traditions.",
   },

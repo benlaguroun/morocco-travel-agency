@@ -8,7 +8,7 @@ const hotelOffers = [
     price: "$120/night",
     rating: 4.8,
     amenities: "Free Wi-Fi, Spa, Pool",
-    image: "/images/riad-fes.jpg",
+    image: "../images/riad-fes.jpg",
   },
   {
     name: "La Mamounia",
@@ -16,7 +16,7 @@ const hotelOffers = [
     price: "$250/night",
     rating: 4.9,
     amenities: "Luxury Spa, Garden, Restaurants",
-    image: "/images/la-mamounia.jpg",
+    image: "../images/la-mamounia.jpg",
   },
   {
     name: "Kasbah Hotel Xaluca",
@@ -24,7 +24,7 @@ const hotelOffers = [
     price: "$90/night",
     rating: 4.5,
     amenities: "Pool, Free Breakfast, Desert View",
-    image: "/images/kasbah-xaluca.jpg",
+    image: "../images/kasbah-xaluca.jpg",
   },
   {
     name: "Sofitel Casablanca",
@@ -32,7 +32,7 @@ const hotelOffers = [
     price: "$180/night",
     rating: 4.7,
     amenities: "Gym, Rooftop Bar, Free Wi-Fi",
-    image: "/images/sofitel-casablanca.jpg",
+    image: "../images/sofitel-casablanca.jpg",
   },
   {
     name: "Selman Marrakech",
@@ -40,7 +40,7 @@ const hotelOffers = [
     price: "$350/night",
     rating: 4.9,
     amenities: "Luxury Spa, Equestrian Club, Pool",
-    image: "/images/selman-marrakech.jpg",
+    image: "../images/selman-marrakech.jpg",
   },
   {
     name: "Dar Ahlam",
@@ -48,7 +48,7 @@ const hotelOffers = [
     price: "$400/night",
     rating: 5.0,
     amenities: "Private Pools, Garden, Butler Service",
-    image: "/images/dar-ahlam.jpg",
+    image: "../images/dar-ahlam.jpg",
   },
   {
     name: "Hotel Sahrai",
@@ -56,7 +56,7 @@ const hotelOffers = [
     price: "$200/night",
     rating: 4.8,
     amenities: "Infinity Pool, Rooftop Bar, Free Wi-Fi",
-    image: "/images/hotel-sahrai.jpg",
+    image: "../images/hotel-sahrai.jpg",
   },
   {
     name: "Royal Mansour",
@@ -64,7 +64,7 @@ const hotelOffers = [
     price: "$600/night",
     rating: 5.0,
     amenities: "Luxury Spa, Private Riads, Fine Dining",
-    image: "/images/royal-mansour.jpg",
+    image: "../images/royal-mansour.jpg",
   },
   {
     name: "Mazagan Beach Resort",
@@ -72,7 +72,7 @@ const hotelOffers = [
     price: "$220/night",
     rating: 4.7,
     amenities: "Golf Course, Beachfront, Casino",
-    image: "/images/mazagan-beach.jpg",
+    image: "../images/mazagan-beach.jpg",
   },
   {
     name: "Villa Diyafa",
@@ -80,7 +80,7 @@ const hotelOffers = [
     price: "$170/night",
     rating: 4.6,
     amenities: "Spa, Garden, Private Villas",
-    image: "/images/villa-diyafa.jpg",
+    image: "../images/villa-diyafa.jpg",
   },
 ];
 

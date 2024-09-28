@@ -7,21 +7,21 @@ const flightOffers = [
     price: "$350",
     airline: "Royal Air Maroc",
     date: "12th October, 2024",
-    image: "/images/casablanca-paris.jpg",
+    image: "../images/casablanca-paris.jpg",
   },
   {
     destination: "Marrakech to New York",
     price: "$700",
     airline: "Air France",
     date: "18th November, 2024",
-    image: "/images/marrakech-newyork.jpg",
+    image: "../images/marrakech-newyork.jpg",
   },
   {
     destination: "Rabat to Madrid",
     price: "$280",
     airline: "Iberia",
     date: "25th October, 2024",
-    image: "/images/rabat-madrid.jpg",
+    image: "../images/rabat-madrid.jpg",
   },
 ];
 

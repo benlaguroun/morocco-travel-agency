@@ -4,7 +4,7 @@ import "./HajjUmrah.css";
 const hajjUmrahPackages = [
   {
     title: "Hajj Package - 5 Star",
-    image: "/images/hajj.jpg",
+    image: "../images/hajj.jpg",
     description:
       "Experience a spiritual journey of a lifetime with our 5-star Hajj package. Stay in luxury hotels, guided religious services, and transportation provided.",
     duration: "10 Days",
@@ -12,7 +12,7 @@ const hajjUmrahPackages = [
   },
   {
     title: "Umrah Package - Budget Friendly",
-    image: "/images/umrah.jpg",
+    image: "../images/umrah.jpg",
     description:
       "Our budget-friendly Umrah package is perfect for pilgrims seeking a sacred journey on a budget. Includes hotel accommodations and local guidance.",
     duration: "7 Days",
@@ -20,7 +20,7 @@ const hajjUmrahPackages = [
   },
   {
     title: "Hajj Deluxe Package",
-    image: "/images/hajj-deluxe.jpg",
+    image: "../images/hajj-deluxe.jpg",
     description:
       "Enjoy a premium experience with our Deluxe Hajj package, including VIP services, private tents, and personalized religious guidance.",
     duration: "12 Days",

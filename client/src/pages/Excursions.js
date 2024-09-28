@@ -4,7 +4,7 @@ import "./Excursions.css";
 const excursionsData = [
   {
     title: "Chefchaouen: The Blue City",
-    image: "/images/chefchaouen.jpg",
+    image: "../images/chefchaouen.jpg",
     description:
       "Visit the stunning blue city of Chefchaouen, a place rich in history and culture. Wander through the blue streets and enjoy local cuisine.",
     duration: "Full-Day",
@@ -12,7 +12,7 @@ const excursionsData = [
   },
   {
     title: "Ouzoud Waterfalls",
-    image: "/images/ouzoud-waterfalls.jpg",
+    image: "../images/ouzoud-waterfalls.jpg",
     description:
       "Explore one of Morocco’s most beautiful natural wonders with a trip to Ouzoud Falls. Perfect for nature lovers and photography enthusiasts.",
     duration: "Half-Day",
@@ -20,7 +20,7 @@ const excursionsData = [
   },
   {
     title: "Aït Benhaddou and Ouarzazate",
-    image: "/images/ait-benhaddou.jpg",
+    image: "../images/ait-benhaddou.jpg",
     description:
       "Discover the UNESCO World Heritage site of Aït Benhaddou and visit the nearby town of Ouarzazate, the gateway to the Sahara Desert.",
     duration: "Full-Day",
@@ -28,7 +28,7 @@ const excursionsData = [
   },
   {
     title: "Essaouira Coastal Excursion",
-    image: "/images/essaouira.jpg",
+    image: "../images/essaouira.jpg",
     description:
       "Spend a day in the charming coastal town of Essaouira. Visit the medina, explore the fortifications, and relax by the Atlantic Ocean.",
     duration: "Full-Day",
@@ -36,7 +36,7 @@ const excursionsData = [
   },
   {
     title: "Merzouga Dunes Adventure",
-    image: "/images/merzouga-dunes.jpg",
+    image: "../images/merzouga-dunes.jpg",
     description:
       "Take a journey into the heart of the desert with a trip to Merzouga, where you’ll explore the towering sand dunes on camelback.",
     duration: "2 Days",
@@ -44,7 +44,7 @@ const excursionsData = [
   },
   {
     title: "Agadir Beach Getaway",
-    image: "/images/agadir-beach.jpg",
+    image: "../images/agadir-beach.jpg",
     description:
       "Relax and unwind with a beach day at Agadir, a vibrant coastal city known for its beautiful beaches and laid-back atmosphere.",
     duration: "Full-Day",

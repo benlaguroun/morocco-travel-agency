@@ -53,19 +53,19 @@ const transferOptions = [
     description:
       "Direct transfer from the airport to any city center location.",
     price: "$50",
-    image: "/images/airport-transfer.jpg",
+    image: "../images/airport-transfer.jpg",
   },
   {
     name: "Hotel to City Tour",
     description: "Comfortable transfers from your hotel for city sightseeing.",
     price: "$70",
-    image: "/images/hotel-transfer.jpg",
+    image: "../images/hotel-transfer.jpg",
   },
   {
     name: "Luxury VIP Transfer",
     description: "Exclusive VIP transfer services with luxury vehicles.",
     price: "$150",
-    image: "/images/vip-transfer.jpg",
+    image: "../images/vip-transfer.jpg",
   },
 ];
 

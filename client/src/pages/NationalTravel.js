@@ -4,7 +4,7 @@ import "./NationalTravel.css";
 const nationalTravelData = [
   {
     title: "Casablanca: The White City",
-    image: "/images/casablanca.jpg",
+    image: "../images/casablanca.jpg",
     description:
       "Explore the economic heart of Morocco, with modern architecture, beaches, and historic sites like the Hassan II Mosque.",
     duration: "3 Days",
@@ -12,7 +12,7 @@ const nationalTravelData = [
   },
   {
     title: "Marrakech: The Red City",
-    image: "/images/marrakech.jpg",
+    image: "../images/marrakech.jpg",
     description:
       "Discover the cultural heritage of Marrakech with its bustling souks, historic palaces, and beautiful gardens.",
     duration: "4 Days",
@@ -20,7 +20,7 @@ const nationalTravelData = [
   },
   {
     title: "Fez: The Cultural Capital",
-    image: "/images/fez.jpg",
+    image: "../images/fez.jpg",
     description:
       "Step into the medieval world of Fez, home to the world's oldest university and a labyrinthine medina.",
     duration: "5 Days",
@@ -28,7 +28,7 @@ const nationalTravelData = [
   },
   {
     title: "Tangier: Gateway to Africa",
-    image: "/images/tangier.jpg",
+    image: "../images/tangier.jpg",
     description:
       "Visit the coastal city of Tangier, known for its rich history and its unique blend of European and Moroccan cultures.",
     duration: "3 Days",
@@ -36,7 +36,7 @@ const nationalTravelData = [
   },
   {
     title: "Rabat: The Capital City",
-    image: "/images/rabat.jpg",
+    image: "../images/rabat.jpg",
     description:
       "Discover Rabat, the political capital of Morocco, known for its gardens, mausoleums, and ancient ruins.",
     duration: "2 Days",
@@ -44,7 +44,7 @@ const nationalTravelData = [
   },
   {
     title: "Chefchaouen: The Blue Pearl",
-    image: "/images/chefchaouen.jpg",
+    image: "../images/chefchaouen.jpg",
     description:
       "Wander through the blue-painted streets of Chefchaouen, a tranquil mountain town with breathtaking views.",
     duration: "2 Days",
