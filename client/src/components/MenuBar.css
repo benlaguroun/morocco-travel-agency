@@ -7,7 +7,7 @@
 }
 
 .menu-bar.scrolled {
-  background-color: #000; /* Black background when scrolled */
+  background-color: #000;
 }
 
 .promo-bar {
@@ -58,8 +58,7 @@
 
 .menu-items li a.active,
 .menu-items .dropdown-toggle.active {
-  background-color: #ff6600;
-  border-radius: 5px;
+  background-color: transparent; /* No background */
 }
 
 .menu-items .dropdown-menu {

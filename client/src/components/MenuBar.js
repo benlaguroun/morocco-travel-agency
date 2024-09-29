@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 import "./MenuBar.css";
 
 const MenuBar = () => {
@@ -11,11 +11,24 @@ const MenuBar = () => {
     services: false,
   });
   const [activeItem, setActiveItem] = useState(""); // To track active menu item
+  const [promoVisible, setPromoVisible] = useState(true); // For promo bar visibility
 
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
       setScrolled(offset > 50);
+
+      // Hide the promotion bar when scrolling down
+      setPromoVisible(offset <= 50);
+
+      // Close all open dropdowns when scrolling down
+      if (offset > 50) {
+        setSubMenuOpen({
+          tours: false,
+          organizedTravels: false,
+          services: false,
+        });
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,9 +51,11 @@ const MenuBar = () => {
 
   return (
     <header className={`menu-bar ${scrolled ? "scrolled" : ""}`}>
-      <div className="promo-bar">
-        <p>Exclusive deals for Morocco - Don't miss out!</p>
-      </div>
+      {promoVisible && (
+        <div className="promo-bar">
+          <p>Exclusive deals for Morocco - Don't miss out!</p>
+        </div>
+      )}
       <nav className="nav-bar">
         <div className="logo">
           <h1>TravelAgency</h1>
