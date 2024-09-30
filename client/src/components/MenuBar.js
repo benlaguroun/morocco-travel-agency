@@ -57,122 +57,124 @@ const MenuBar = () => {
         </div>
       )}
       <nav className="nav-bar">
-        <div className="logo">
-          <h1>TravelAgency</h1>
+        <div className="nav-content">
+          <div className="logo">
+            <h1>TravelAgency</h1>
+          </div>
+          <ul className={`menu-items ${menuOpen ? "active" : ""}`}>
+            <li>
+              <Link
+                to="/"
+                className={activeItem === "home" ? "active" : ""}
+                onClick={() => handleItemClick("home")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <button
+                className={`dropdown-toggle ${
+                  activeItem === "tours" ? "active" : ""
+                }`}
+                onClick={() => {
+                  toggleSubMenu("tours");
+                  handleItemClick("tours");
+                }}
+              >
+                Tours
+              </button>
+              {subMenuOpen.tours && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/tours">Tours</Link>
+                  </li>
+                  <li>
+                    <Link to="/trekking">Trekking</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <Link
+                to="/activities"
+                className={activeItem === "activities" ? "active" : ""}
+                onClick={() => handleItemClick("activities")}
+              >
+                Activities
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/excursions"
+                className={activeItem === "excursions" ? "active" : ""}
+                onClick={() => handleItemClick("excursions")}
+              >
+                Excursions
+              </Link>
+            </li>
+            <li>
+              <button
+                className={`dropdown-toggle ${
+                  activeItem === "organizedTravels" ? "active" : ""
+                }`}
+                onClick={() => {
+                  toggleSubMenu("organizedTravels");
+                  handleItemClick("organizedTravels");
+                }}
+              >
+                Organized Travels
+              </button>
+              {subMenuOpen.organizedTravels && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/national-travel">National Travel</Link>
+                  </li>
+                  <li>
+                    <Link to="/international-travel">International Travel</Link>
+                  </li>
+                  <li>
+                    <Link to="/hajj-umrah">Hajj / Umrah</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <button
+                className={`dropdown-toggle ${
+                  activeItem === "services" ? "active" : ""
+                }`}
+                onClick={() => {
+                  toggleSubMenu("services");
+                  handleItemClick("services");
+                }}
+              >
+                Our Services
+              </button>
+              {subMenuOpen.services && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/event">Event</Link>
+                  </li>
+                  <li>
+                    <Link to="/flights">Flights</Link>
+                  </li>
+                  <li>
+                    <Link to="/hotels">Hotels</Link>
+                  </li>
+                  <li>
+                    <Link to="/transfer">Transfer</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+          </ul>
+          {/* <div className="auth-buttons">
+            <button className="signup">Signup</button>
+            <button className="login">Login</button>
+          </div> */}
         </div>
         <div className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? "✕" : "☰"} {/* Close or open menu */}
-        </div>
-        <ul className={`menu-items ${menuOpen ? "active" : ""}`}>
-          <li>
-            <Link
-              to="/"
-              className={activeItem === "home" ? "active" : ""}
-              onClick={() => handleItemClick("home")}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <button
-              className={`dropdown-toggle ${
-                activeItem === "tours" ? "active" : ""
-              }`}
-              onClick={() => {
-                toggleSubMenu("tours");
-                handleItemClick("tours");
-              }}
-            >
-              Tours
-            </button>
-            {subMenuOpen.tours && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/tours">Tours</Link>
-                </li>
-                <li>
-                  <Link to="/trekking">Trekking</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li>
-            <Link
-              to="/activities"
-              className={activeItem === "activities" ? "active" : ""}
-              onClick={() => handleItemClick("activities")}
-            >
-              Activities
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/excursions"
-              className={activeItem === "excursions" ? "active" : ""}
-              onClick={() => handleItemClick("excursions")}
-            >
-              Excursions
-            </Link>
-          </li>
-          <li>
-            <button
-              className={`dropdown-toggle ${
-                activeItem === "organizedTravels" ? "active" : ""
-              }`}
-              onClick={() => {
-                toggleSubMenu("organizedTravels");
-                handleItemClick("organizedTravels");
-              }}
-            >
-              Organized Travels
-            </button>
-            {subMenuOpen.organizedTravels && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/national-travel">National Travel</Link>
-                </li>
-                <li>
-                  <Link to="/international-travel">International Travel</Link>
-                </li>
-                <li>
-                  <Link to="/hajj-umrah">Hajj / Umrah</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li>
-            <button
-              className={`dropdown-toggle ${
-                activeItem === "services" ? "active" : ""
-              }`}
-              onClick={() => {
-                toggleSubMenu("services");
-                handleItemClick("services");
-              }}
-            >
-              Our Services
-            </button>
-            {subMenuOpen.services && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/event">Event</Link>
-                </li>
-                <li>
-                  <Link to="/flights">Flights</Link>
-                </li>
-                <li>
-                  <Link to="/hotels">Hotels</Link>
-                </li>
-                <li>
-                  <Link to="/transfer">Transfer</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-        </ul>
-        <div className="auth-buttons">
-          <button className="signup">Signup</button>
-          <button className="login">Login</button>
+          {menuOpen ? "✕" : "☰"}
         </div>
       </nav>
     </header>
