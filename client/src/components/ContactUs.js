@@ -1,4 +1,3 @@
-// src/components/ContactUs.js
 import React, { useState } from "react";
 import "./ContactUs.css";
 
@@ -46,13 +45,26 @@ const ContactUs = () => {
           <p>info@travelagency.com</p>
         </div>
         <div className="social-icons">
-          <a href="#">
+          {/* Replace href="#" with actual links or use a button */}
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-instagram"></i>
           </a>
         </div>
