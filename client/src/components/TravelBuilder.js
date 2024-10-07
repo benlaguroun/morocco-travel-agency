@@ -15,21 +15,21 @@ const destinations = [
     name: "Essaouira",
     type: "Relaxation",
     price: "$800 - $1200",
-    image: "../images/marrakech.jpg",
+    image: "../images/Essaouira.jpg",
   },
   {
     id: 3,
     name: "Fez",
     type: "Cultural",
     price: "$900 - $1300",
-    image: "../images/marrakech.jpg",
+    image: "../images/Fez.jpg",
   },
   {
     id: 4,
     name: "Chefchaouen",
     type: "Nature",
     price: "$700 - $1100",
-    image: "../images/marrakech.jpg",
+    image: "../images/Chefchaouen.jpg",
   },
 ];
 
