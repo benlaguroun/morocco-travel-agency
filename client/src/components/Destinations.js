@@ -119,9 +119,10 @@ const Destinations = () => {
                   ${destination.price}
                 </span>
               </div>
-              <a href="#" className="destination-explore">
+              {/* Updated the anchor tag to a button */}
+              <button type="button" className="destination-explore">
                 Explore →
-              </a>
+              </button>
             </div>
           </div>
         ))}
