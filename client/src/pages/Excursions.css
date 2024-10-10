@@ -21,6 +21,7 @@
   z-index: 1;
   overflow: hidden;
   background-attachment: fixed;
+  margin-top: 55px;
 }
 
 .excursions-header h1 {
